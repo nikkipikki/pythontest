@@ -15,8 +15,6 @@ class Product:
 	def final_price(self):
 		return self.price * self.tax
 
-robot = Product(price=900, tax=1.25)
-book = Product (price=100, tax=1.06)
-
-
-print(robot.final_price() * 2 + book.final_price())
+products = [Product(price=900 * 2, tax=1.25), Product(price=100, tax=1.06)]
+total_price = products[0].final_price() + products[1].final_price()
+print(total_price)
